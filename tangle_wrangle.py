@@ -103,7 +103,10 @@ def run_tangle_wrangle():
             y1 += y1_change
             display.fill([0, 0, 0])
 
-            display.blit(food_image, (foodx, foody))
+            display.blit(
+                food_image, 
+                (foodx - snake_block // 2, foody - snake_block // 2)
+            )
             
             snake_head = []
             snake_head.append(x1)
