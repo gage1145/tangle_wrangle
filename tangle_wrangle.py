@@ -101,7 +101,7 @@ def run_tangle_wrangle():
                 game_close = True
             x1 += x1_change
             y1 += y1_change
-            display.fill(black)
+            display.fill([0, 0, 0])
 
             display.blit(food_image, (foodx, foody))
             
