@@ -132,6 +132,5 @@ def run_tangle_wrangle():
             clock.tick(snake_speed)
 
         pygame.quit()
-        quit()
 
     gameLoop()
