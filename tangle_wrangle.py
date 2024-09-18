@@ -19,8 +19,8 @@ def run_tangle_wrangle():
 
     clock = pygame.time.Clock()
 
-    font_style = pygame.font.SysFont("bahnschrift", 25)
-    score_font = pygame.font.SysFont("comicsansms", 35)
+    font_style = pygame.font.SysFont("haettenschweiler", 35)
+    score_font = pygame.font.SysFont("haettenschweiler", 35)
 
     snake_image = pygame.image.load("images/PIRIB.png")  # Path to snake image
     food_image = pygame.image.load("images/glob.png")    # Path to food image
