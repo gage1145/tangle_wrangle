@@ -8,8 +8,8 @@ def run_tangle_wrangle():
     pygame.init()
 
     # Display settings
-    width = 600
-    height = 400
+    width = 1200
+    height = 800
     display = pygame.display.set_mode((width, height))
     pygame.display.set_caption('Snake Game')
 
