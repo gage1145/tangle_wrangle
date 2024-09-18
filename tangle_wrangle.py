@@ -33,9 +33,13 @@ def run_tangle_wrangle():
         value = score_font.render("Your Score: " + str(score), True, [233, 169, 71])
         display.blit(value, [0, 0])
 
-    def our_snake(snake_block, snake_list):
+    def snake(snake_block, snake_list):
         for x in snake_list:
-            display.blit(snake_image, (x[0], x[1]))
+            display.blit(
+                snake_image, 
+                (x[0] - snake_block // 2, x[1] - snake_block // 2)
+            )
+
 
     def message(msg, color):
         mesg = font_style.render(msg, True, color)
