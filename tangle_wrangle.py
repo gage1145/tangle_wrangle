@@ -97,7 +97,7 @@ def run_tangle_wrangle():
                         y1_change = snake_block
                         x1_change = 0
 
-            if x1 >= width or x1 < 0 or y1 >= height or y1 < 0:
+            if is_snake_out_of_bounds(x1, y1, width, height):
                 game_close = True
             x1 += x1_change
             y1 += y1_change
