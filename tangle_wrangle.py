@@ -61,8 +61,8 @@ def run_tangle_wrangle():
         while not game_over:
 
             while game_close == True:
-                display.fill(blue)
-                message("You Lost! Press Q-Quit or C-Play Again", red)
+                display.fill([11, 127, 126])
+                message("You Lost! Press Q-Quit or C-Play Again", [255, 10, 0])
                 your_score(length_of_snake - 1)
                 pygame.display.update()
 
