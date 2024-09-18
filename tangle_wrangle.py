@@ -30,7 +30,7 @@ def run_tangle_wrangle():
     
 
     def your_score(score):
-        value = score_font.render("Your Score: " + str(score), True, yellow)
+        value = score_font.render("Your Score: " + str(score), True, [233, 169, 71])
         display.blit(value, [0, 0])
 
     def our_snake(snake_block, snake_list):
