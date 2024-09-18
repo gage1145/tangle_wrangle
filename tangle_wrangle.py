@@ -14,8 +14,9 @@ def run_tangle_wrangle():
     pygame.display.set_caption('Snake Game')
 
     # Snake settings
-    snake_block = 10
+    snake_block = 40
     snake_speed = 15
+    snake_over = 1.5
 
     clock = pygame.time.Clock()
 
@@ -23,10 +24,10 @@ def run_tangle_wrangle():
     score_font = pygame.font.SysFont("haettenschweiler", 35)
 
     snake_image = pygame.image.load("images/PIRIB.png")
-    snake_image = pygame.transform.scale(snake_image, (snake_block * 2, snake_block * 2))
+    snake_image = pygame.transform.scale(snake_image, (snake_block * snake_over, snake_block * snake_over))
 
     food_image = pygame.image.load("images/glob.png")
-    food_image = pygame.transform.scale(food_image, (snake_block * 2, snake_block * 2))
+    food_image = pygame.transform.scale(food_image, (snake_block * snake_over, snake_block * snake_over))
     
 
     def your_score(score):
@@ -61,8 +62,8 @@ def run_tangle_wrangle():
         length_of_snake = 1
 
         # Random food position
-        foodx = round(random.randrange(0, width - snake_block) / 10.0) * 10.0
-        foody = round(random.randrange(0, height - snake_block) / 10.0) * 10.0
+        foodx = round(random.randrange(0, width - snake_block) / snake_block) * snake_block
+        foody = round(random.randrange(0, height - snake_block) / snake_block) * snake_block
 
         while not game_over:
 
@@ -125,8 +126,8 @@ def run_tangle_wrangle():
             pygame.display.update()
 
             if x1 == foodx and y1 == foody:
-                foodx = round(random.randrange(0, width - snake_block) / 10.0) * 10.0
-                foody = round(random.randrange(0, height - snake_block) / 10.0) * 10.0
+                foodx = round(random.randrange(0, width - snake_block) / snake_block) * snake_block
+                foody = round(random.randrange(0, height - snake_block) / snake_block) * snake_block
                 length_of_snake += 1
 
             clock.tick(snake_speed)
