@@ -119,7 +119,7 @@ def run_tangle_wrangle():
                 if x == snake_head:
                     game_close = True
 
-            our_snake(snake_block, snake_list)
+            snake(snake_block, snake_list)
             your_score(length_of_snake - 1)
 
             pygame.display.update()
