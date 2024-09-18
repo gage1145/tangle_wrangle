@@ -40,6 +40,8 @@ def run_tangle_wrangle():
                 (x[0] - snake_block // 2, x[1] - snake_block // 2)
             )
 
+    def is_snake_out_of_bounds(x, y, width, height):
+        return x >= width or x < 0 or y >= height or y < 0
 
     def message(msg, color):
         mesg = font_style.render(msg, True, color)
