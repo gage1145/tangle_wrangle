@@ -22,8 +22,12 @@ def run_tangle_wrangle():
     font_style = pygame.font.SysFont("haettenschweiler", 35)
     score_font = pygame.font.SysFont("haettenschweiler", 35)
 
-    snake_image = pygame.image.load("images/PIRIB.png")  # Path to snake image
-    food_image = pygame.image.load("images/glob.png")    # Path to food image
+    snake_image = pygame.image.load("images/PIRIB.png")
+    snake_image = pygame.transform.scale(snake_image, (snake_block * 2, snake_block * 2))
+
+    food_image = pygame.image.load("images/glob.png")
+    food_image = pygame.transform.scale(food_image, (snake_block * 2, snake_block * 2))
+    
 
     def your_score(score):
         value = score_font.render("Your Score: " + str(score), True, yellow)
